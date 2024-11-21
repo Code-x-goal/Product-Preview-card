@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color:hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 350px;
+    width: 31.25rem;
+    border-radius: 20px;
+    
+}
+
+.img{
+    background-image: url(./image-product-desktop.jpg);
+    height: 350px;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content{
+    background-color: hsl(0, 0%, 100%);
+    height: 350px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding:15px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.money .actual{
+    font-size: 1.6rem;
+    color: hsl(158, 36%, 37%);
+    font-weight: 900;
+}
+
+.money .previous{
+    font-size: 1rem;
+    margin-left: 10px;
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    position: relative;
+    top: -5px;
+}
+
+button{
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color:hsl(158, 36%, 23%);
+}
+
+p{
+    font-size: 0.9rem;
+    padding-top: 20px;
+    line-height: 20px;
+    color: hsl(228, 12%, 48%);
+}
+
+h1{
+    line-height: 30px;
+    padding-top: 15px;
+}
+
+h5{
+    letter-spacing: 8px;
+    font-weight: lighter;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.money{
+    padding-top: 15px;
+}
+
+.text{
+    margin-left: 10px;
+}
+
+@media screen and (max-width:450px){
+.container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 20rem;
+    width: 90vw;
+}
+
+.img{
+background-image: url(./image-product-mobile.jpg);
+height: 100%;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.content{
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+}
+
